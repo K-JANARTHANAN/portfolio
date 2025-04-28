@@ -1,0 +1,476 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000; /* Entire background black */
+    color: #fff; /* Default text white */
+    line-height: 1.6;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  /* Navbar */
+  nav {
+    width: 100%;
+    background: #111;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+  }
+  
+  .logo {
+    margin-left: 10px;
+    color: #00ff00; /* Green logo */
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin: 0 15px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 23px;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color:  #ff00ae; /* Hover Red */
+  }
+  
+  /* Header Section */
+  header {
+    height: 100vh;
+    background: #000;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 60px; /* For navbar */
+  }
+  
+  .header-container {
+    padding: 20px;
+  }
+  
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #00ff00; /* Green border */
+    margin-bottom: 20px;
+  }
+  
+  .tagline {
+    font-style: italic;
+    margin-top: 10px;
+    color: #00ff00; /* Tagline in green */
+  }
+  
+  /* Each Section */
+  .section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 60px;
+  }
+  
+ /* Centering and styling the section headings */
+section h2 {
+  text-align: center; /* Center the text */
+  font-size: 2rem; /* Increase font size */
+  color: #ff00ae; /* Pink color */
+  border-bottom: 3px solid #ff00ae; /* Pink border at the bottom */
+  padding-bottom: 10px; /* Space between text and border */
+  margin-bottom: 40px; /* Margin below the heading */
+}
+
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  .project {
+    margin-bottom: 20px;
+  }
+  
+  .project h3 {
+    color: #00ff00; /* Green project title */
+  }
+  
+  #skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    padding: 20px 0;
+  }
+  
+  #skills-list li {
+    list-style: none;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    padding: 20px 30px; /* Bigger boxes */
+    border-radius: 15px;
+    color: white;
+    font-size: 20px; /* Bigger text */
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  /* Hover Effect */
+  #skills-list li:hover {
+    background: linear-gradient(135deg, #ff6a00 0%, #ee0979 100%);
+    transform: scale(1.05); /* Slight zoom */
+  }
+  
+  /* Add Arrow on Hover */
+  #skills-list li::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    transform: translateY(-50%) scale(0);
+    width: 0;
+    height: 0;
+    border-left: 10px solid #00ff00; /* Green arrow */
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    transition: transform 0.3s ease;
+  }
+  
+  #skills-list li:hover::after {
+    transform: translateY(-50%) scale(1);
+  }
+  
+  
+  /* Contact Form */
+  #contact-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #contact-form input,
+  #contact-form textarea {
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #ff00ae; /* Green borders */
+    border-radius: 10px;
+    background: transparent;
+    color: #fff;
+    font-size: 16px;
+  }
+  
+  #contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
+  }
+  
+  #contact-form button {
+    padding: 12px;
+    background: #00ff00;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s;
+  }
+  
+  #contact-form button:hover {
+    background:  #ff00ae;
+    color: white;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    color: #fff;
+    font-size: 14px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .nav-links {
+      flex-direction: column;
+      background: #222;
+      display: none;
+    }
+  
+    .nav-links li {
+      margin: 10px 0;
+    }
+  
+    nav.active .nav-links {
+      display: flex;
+    }
+  
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+    }
+  
+    section {
+      padding: 20px;
+    }
+  }
+  
+
+  .about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap; /* for mobile responsiveness */
+    padding: 40px 20px;
+  }
+  
+  .about-text {
+    flex: 1;
+    min-width: 280px;
+  }
+  
+  .about-text h2 {
+    margin-bottom: 20px;
+    color:  #ff00ae; /* Red heading */
+  }
+  
+  .about-text p {
+    font-size: 18px;
+    color: #fff; /* White text */
+  }
+  
+/* Add blinking effect to the image */
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius:299px;
+  border: 3px solid #0bc34e; /* Initial green border */
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.6); /* Initial green shadow */
+  animation: blinkBorder 2s infinite; /* Add the blinking animation */
+}
+
+/* Define the blinking border color and shadow animation */
+@keyframes blinkBorder {
+  0% {
+    border-color: #0bc34e; /* Green border */
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.8); /* Green shadow */
+  }
+  50% {
+    border-color: #ff00ae; /* Pink border */
+    box-shadow: 0 0 25px rgba(255, 0, 174, 0.8); /* Pink shadow */
+  }
+  100% {
+    border-color: #0bc34e; /* Green border */
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.8); /* Green shadow */
+  }
+}
+
+
+/* Styling for each project */
+.project {
+  background-color: #111; /* Dark background to match the theme */
+  border: 2px solid #ff00ae; /* Pink border */
+  border-radius: 10px; /* Rounded corners for the box */
+  padding: 20px; /* Space inside the box */
+  margin-bottom: 20px; /* Space between each project box */
+  box-shadow: 0 0 15px rgba(255, 0, 174, 0.3); /* Soft pink shadow around the box */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for project boxes */
+.project:hover {
+  transform: scale(1.05); /* Slightly enlarge the box */
+  box-shadow: 0 0 25px rgba(255, 0, 174, 0.5); /* Stronger pink shadow */
+}
+
+
+/* Contact section styling */
+#contact {
+  display: flex;
+  flex-direction: column;
+   
+  gap: 20px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.contact-item i {
+  color: #ff00ae; /* Pink color for the icons */
+  font-size: 24px;
+}
+
+.contact-item span {
+  font-size: 18px;
+}
+
+.contact-item a {
+  color: #00ff00; /* Green color for the email and phone links */
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+/* Style for the contact form */
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#contact-form input,
+#contact-form textarea {
+  margin-bottom: 15px;
+  padding: 12px;
+  border: 1px solid #ff00ae; /* Pink border */
+  border-radius: 10px;
+  background: transparent;
+  color: #fff;
+  font-size: 16px;
+}
+
+#contact-form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+#contact-form button {
+  padding: 12px;
+  background: #00ff00;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background 0.3s;
+}
+
+#contact-form button:hover {
+  background: #ff0000;
+  color: white;
+}
+
+
+/* Hamburger Button Styling */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburger span {
+  width: 30px;
+  height: 4px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* Nav Links Hidden by Default on Small Screens */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 23px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff00ae; /* Hover Red */
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background: #111;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: left 0.3s ease;
+  }
+
+  /* Hamburger Button Visibility */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Show menu when active */
+  nav.active .nav-links {
+    left: 0;
+  }
+
+  /* Change the hamburger to a cross when active */
+  nav.active .hamburger span:nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 8px;
+  }
+
+  nav.active .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+
+  nav.active .hamburger span:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    bottom: 8px;
+  }
+}
